@@ -1,0 +1,434 @@
+/* Global Resets & Basic Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif; /* Simple, clean font */
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333; /* Dark grey for text */
+    background-color: #f9f9f9; /* Light grey background */
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden; /* Clear floats */
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: #2c3e50; /* Charcoal */
+    margin-bottom: 0.8em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: #3498db; /* Primary blue accent */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2980b9; /* Darker blue on hover */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header & Navigation */
+header {
+    background: #ffffff; /* White header */
+    color: #2c3e50; /* Charcoal text */
+    padding: 1em 0;
+    border-bottom: 1px solid #e0e0e0; /* Light border */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #2c3e50; /* Charcoal */
+}
+
+header nav ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+header nav ul li a:hover, header nav ul li a.active {
+    color: #3498db; /* Blue accent for hover/active */
+}
+
+/* Hero Section (Homepage) */
+#hero {
+    background: #2c3e50; /* Charcoal background */
+    color: #ffffff; /* White text */
+    padding: 4em 0;
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: 2.8em;
+    margin-bottom: 0.5em;
+    color: #ffffff;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+.carousel-placeholder {
+    background: #34495e; /* Darker charcoal for placeholder */
+    color: #ecf0f1;
+    padding: 3em;
+    margin: 2em auto;
+    border: 2px dashed #95a5a6;
+    max-width: 70%;
+}
+
+/* Call to Action (CTA) Buttons */
+.cta-button, button[type="submit"] {
+    display: inline-block;
+    background: #27ae60; /* Green accent */
+    color: #ffffff;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover, button[type="submit"]:hover {
+    background: #229954; /* Darker green */
+    color: #ffffff;
+}
+
+.cta-button-secondary {
+    display: inline-block;
+    background: #3498db; /* Blue accent */
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button-secondary:hover {
+    background: #2980b9; /* Darker blue */
+    color: #ffffff;
+}
+
+
+/* Main Content Area */
+main.container {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background: #ffffff;
+    margin-top: 10px; /* if header is sticky and has border */
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* Services Section */
+#intro-services {
+    padding: 2em 0;
+    text-align: center;
+    background: #ecf0f1; /* Light grey */
+}
+#intro-services h2{
+    margin-bottom: 1em;
+}
+.service-summary {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1.5em;
+}
+.service-summary div {
+    padding: 1em;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    width: 30%;
+}
+
+/* Services Page Specifics */
+#stone-benchtop-repairs, #tile-repairs, #concrete-surface-fixes, #polishing-restoration {
+    margin-bottom: 2em;
+    padding: 1.5em;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background: #fdfdfd;
+}
+#stone-benchtop-repairs ul, #tile-repairs ul, #concrete-surface-fixes ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+/* Gallery Page */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1em;
+    margin-bottom: 2em;
+}
+.gallery-item {
+    border: 1px solid #e0e0e0;
+    padding: 0.5em;
+    text-align: center;
+    background: #ffffff;
+}
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Crop images to fit */
+    margin-bottom: 0.5em;
+    background: #ccc; /* Placeholder background */
+}
+
+/* About Page */
+#owner-intro .owner-image { /* Changed from img to .owner-image class */
+    border-radius: 5px;
+    border: 3px solid #e0e0e0;
+    max-width: 300px;
+    margin-top: 20px;
+    display: block; /* if it needs to be centered or have margin auto */
+    margin-left: auto; /* Example: centering if it's a block */
+    margin-right: auto; /* Example: centering if it's a block */
+}
+#our-commitment ul {
+    list-style: none;
+    padding: 0;
+}
+#our-commitment ul li {
+    padding: 0.5em 0 0.5em 25px;
+    position: relative;
+    margin-bottom: 0.5em;
+}
+#our-commitment ul li::before {
+    content: '✔'; /* Checkmark */
+    position: absolute;
+    left: 0;
+    color: #27ae60; /* Green accent */
+    font-weight: bold;
+}
+
+
+/* Contact Form */
+#quote-form .form-group {
+    margin-bottom: 1.5em;
+}
+#quote-form label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    color: #555;
+}
+#quote-form input[type="text"],
+#quote-form input[type="email"],
+#quote-form input[type="tel"],
+#quote-form select,
+#quote-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Important for 100% width */
+}
+#quote-form input[type="file"] {
+    padding: 5px;
+}
+#quote-form small {
+    display: block;
+    margin-top: 0.3em;
+    font-size: 0.9em;
+    color: #777;
+}
+#contact-details {
+    margin-top: 3em;
+    padding-top: 2em;
+    border-top: 1px solid #e0e0e0;
+}
+#contact-details h2 {
+    margin-bottom: 0.5em;
+}
+#contact-details p {
+    margin-bottom: 0.3em;
+}
+
+
+/* FAQ Page */
+.faq-item {
+    margin-bottom: 1.5em;
+    padding-bottom: 1.5em;
+    border-bottom: 1px dotted #e0e0e0;
+}
+.faq-item:last-child {
+    border-bottom: none;
+}
+.faq-item h2 {
+    font-size: 1.3em;
+    color: #3498db; /* Blue for questions */
+}
+
+/* Testimonials Page */
+.testimonial-item {
+    background: #f9f9f9;
+    border-left: 5px solid #3498db; /* Blue accent border */
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    border-radius: 0 5px 5px 0;
+}
+.testimonial-item blockquote {
+    margin: 0;
+    padding: 0;
+}
+.testimonial-item blockquote p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 0.5em;
+}
+.testimonial-item footer {
+    text-align: right;
+    font-weight: bold;
+    color: #2c3e50; /* Charcoal */
+}
+
+/* Footer */
+footer {
+    background: #2c3e50; /* Charcoal */
+    color: #ecf0f1; /* Light grey text */
+    text-align: center;
+    padding: 2em 0;
+    margin-top: 2em;
+}
+footer p {
+    margin: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    #logo {
+        margin-bottom: 0.5em;
+    }
+    header nav ul {
+        text-align: center;
+    }
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #hero h1 {
+        font-size: 2em;
+    }
+    #hero p {
+        font-size: 1em;
+    }
+    .carousel-placeholder {
+        max-width: 90%;
+        padding: 2em;
+    }
+
+    .service-summary {
+        flex-direction: column;
+    }
+    .service-summary div {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+    .service-summary div:last-child {
+        margin-bottom: 0;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Smaller items on mobile */
+    }
+    .gallery-item img {
+        height: 150px;
+    }
+
+    /* Fixed CTA for Mobile - Example */
+    /* This would require JavaScript to toggle visibility or a more complex CSS setup */
+    /* For now, ensure CTAs are easily tappable */
+    .cta-button, button[type="submit"] {
+        padding: 15px 20px; /* Larger tap target */
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 10px;
+    }
+    .cta-button-secondary {
+        padding: 12px 18px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 10px;
+    }
+    main.container .cta-button, main.container button[type="submit"], main.container .cta-button-secondary {
+        /* Specificity for main content buttons if needed, but above should cover */
+    }
+
+    /* Make form elements full width for easier use */
+    #quote-form input[type="text"],
+    #quote-form input[type="email"],
+    #quote-form input[type="tel"],
+    #quote-form select,
+    #quote-form textarea {
+        font-size: 16px; /* Prevent iOS zoom on focus */
+    }
+}
+
+/* Placeholder for fixed mobile CTA - if implemented with JS */
+/*
+.fixed-mobile-cta {
+    display: none; // Hidden by default
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #27ae60;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    z-index: 1001; // Above header
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+}
+@media (max-width: 768px) {
+    .fixed-mobile-cta {
+        display: block; // Show on mobile
+    }
+    body {
+        padding-bottom: 60px; // Ensure content isn't hidden by fixed CTA
+    }
+}
+*/
