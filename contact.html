@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Quote - Perth Chip Repairs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="logo">Perth Chip Repairs</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact/Quote</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Get a Free Quote or Send an Enquiry</h1>
+        <p>The best way to get an accurate quote is to send us a photo of the damage. Please fill out the form below and upload your images. We'll get back to you as soon as possible.</p>
+
+        <form id="quote-form" action="submit-form.php" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+
+            <div class="form-group">
+                <label for="service-type">Service Required:</label>
+                <select id="service-type" name="service-type">
+                    <option value="">--Please choose an option--</option>
+                    <option value="stone_benchtop">Stone Benchtop Repair</option>
+                    <option value="tile_repair">Tile Repair</option>
+                    <option value="concrete_repair">Concrete Surface Fix</option>
+                    <option value="other">Other (Please describe below)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Description of Damage:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="photo-upload">Upload Photo(s) of Damage (Max 5MB each):</label>
+                <input type="file" id="photo-upload" name="photo-upload[]" multiple accept="image/*">
+                <small>You can select multiple images.</small>
+            </div>
+
+            <button type="submit" class="cta-button">Send Request</button>
+        </form>
+
+        <div id="contact-details">
+            <h2>Other Ways to Contact Us</h2>
+            <p><strong>Phone:</strong> [Your Phone Number]</p>
+            <p><strong>Email:</strong> [Your Email Address]</p>
+            <p>Servicing the greater Perth metropolitan area.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Perth Chip Repairs. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
